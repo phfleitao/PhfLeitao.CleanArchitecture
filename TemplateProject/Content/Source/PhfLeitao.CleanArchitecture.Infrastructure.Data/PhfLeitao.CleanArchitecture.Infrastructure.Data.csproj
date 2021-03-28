@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PhfLeitao.CleanArchitecture.Core.Common\PhfLeitao.CleanArchitecture.Core.Common.csproj" />
+    <ProjectReference Include="..\PhfLeitao.CleanArchitecture.Core.Domain\PhfLeitao.CleanArchitecture.Core.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

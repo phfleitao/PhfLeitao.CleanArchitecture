@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>PhfLeitao.CleanArchitecture.Template</PackageId>
+    <PackageType>Template</PackageType>
+    <Version>1.0.0</Version>
+    <License>MIT</License>
+    <Authors>Pedro Leitão</Authors>
+    <Company>PhfLeitao</Company>
+    <Title>PhfLeitao CleanArchitecture Template</Title>
+    <PackageDescription>A Simple Solution based on Clean Architecture</PackageDescription>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageOutputPath>./nupkg</PackageOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Content\**\*.*" Exclude="Content\**\bin\**\*.*;Content\**\obj\**\*.*" />
+    <Content Include="Solution\**" Exclude="Solution\**\bin\**;Solution\**\obj\**;Solution\**\.vs\**" />
+    <Compile Remove="**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="nupkg\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Content\.template.config\icon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
